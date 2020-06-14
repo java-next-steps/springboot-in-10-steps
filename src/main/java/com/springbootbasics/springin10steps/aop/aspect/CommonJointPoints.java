@@ -11,7 +11,7 @@ public class CommonJointPoints {
     public void businessLayerExecution(){}
 
     @Pointcut("com.springbootbasics.springin10steps.aop.aspect.CommonJointPoints.dataLayerExecution() && " +
-            "com.springbootbasics.springin10steps.aop.aspect.CommonJointPoints.businessLayerExecution")
+            "com.springbootbasics.springin10steps.aop.aspect.CommonJointPoints.businessLayerExecution()")
     public void allLayerExecution(){}
 
     @Pointcut("bean(*dao*)")
@@ -19,4 +19,7 @@ public class CommonJointPoints {
 
     @Pointcut("within(com.springbootbasics.springin10steps.aop.data..*)")
     public void dataLayerExecutionWithin(){}
+
+    @Pointcut("@annotation(com.springbootbasics.springin10steps.aop.aspect.TrackTime)")
+    public void trackTimeAnnotation(){}
 }

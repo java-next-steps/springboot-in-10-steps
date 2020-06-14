@@ -16,8 +16,16 @@ public class AroundAspect {
 
     Logger LOGGER = LoggerFactory.getLogger(AroundAspect.class);
 
-    @Around("execution(* com.springbootbasics.springin10steps.aop.business.*.*(..))")
-    public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+//    @Around("execution(* com.springbootbasics.springin10steps.aop.business.*.*(..))")
+//    public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+//        long startTime = System.currentTimeMillis();
+//        proceedingJoinPoint.proceed();
+//        long executionTime = System.currentTimeMillis() - startTime;
+//        LOGGER.info("AroundAspect: method calls: {}, execTime: {}", proceedingJoinPoint, executionTime);
+//    }
+
+    @Around("com.springbootbasics.springin10steps.aop.aspect.CommonJointPoints.trackTimeAnnotation()")
+    public void trackTimeWithCustomAnnotation(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         proceedingJoinPoint.proceed();
         long executionTime = System.currentTimeMillis() - startTime;
