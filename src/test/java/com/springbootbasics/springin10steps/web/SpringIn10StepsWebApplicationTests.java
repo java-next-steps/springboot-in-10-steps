@@ -1,10 +1,10 @@
-package com.springbootbasics.springin10steps;
+package com.springbootbasics.springin10steps.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringIn10StepsApplicationTests {
+class SpringIn10StepsWebApplicationTests {
 
 	@Test
 	void contextLoads() {
