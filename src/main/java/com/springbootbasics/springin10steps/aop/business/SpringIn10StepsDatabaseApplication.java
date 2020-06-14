@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+//Author: Manas Mukherjee
+
 @SpringBootApplication
 public class SpringIn10StepsDatabaseApplication implements CommandLineRunner {
 
