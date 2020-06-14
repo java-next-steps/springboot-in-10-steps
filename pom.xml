@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springbootbasics</groupId>
-	<artifactId>spring-in-10-steps</artifactId>
+	<artifactId>springboot-in-10-steps</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-in-10-steps</name>
+	<name>springboot-in-10-steps</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
