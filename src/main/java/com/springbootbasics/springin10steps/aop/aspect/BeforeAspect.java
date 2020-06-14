@@ -16,9 +16,10 @@ public class BeforeAspect {
     Logger LOGGER = LoggerFactory.getLogger(BeforeAspect.class);
 
     //What kind of method calls I would intercept
-    @Before("execution(* com.springbootbasics.springin10steps.aop.business.*.*(..))")
+    //Weaving and Weaver
+    @Before("com.springbootbasics.springin10steps.aop.aspect.CommonJointPoints.dataLayerExecution()")
     public void before(JoinPoint joinPoint){
-        //What to do?
+        //What to do? Advice
         LOGGER.info("Intercepted method calls {}", joinPoint);
     }
 }
